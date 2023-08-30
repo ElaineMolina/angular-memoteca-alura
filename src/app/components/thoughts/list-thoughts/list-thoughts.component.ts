@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThoughtService } from '../thought.service';
 import { Thought } from '../thought/thought';
 
 @Component({
@@ -9,9 +10,12 @@ import { Thought } from '../thought/thought';
 export class ListThoughtsComponent implements OnInit {
 
   listaPensamentos: Thought[] =  [];
-  constructor() { }
+  constructor(private service: ThoughtService) { }
 
   ngOnInit(): void {
+    this.service.listar().subscribe((listaPensamentos) => {
+      this.listaPensamentos = listaPensamentos
+    });
   }
 
 }
