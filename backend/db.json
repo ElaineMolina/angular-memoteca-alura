@@ -4,42 +4,49 @@
       "id": 2,
       "conteudo": "Estudando Angular",
       "autoria": "Dev Alura",
-      "modelo": "modelo2"
+      "modelo": "modelo2",
+      "favorito": false
     },
     {
       "id": 3,
       "conteudo": "Angular é o melhor'",
       "autoria": "Dev Alura",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": false
     },
     {
       "id": 4,
       "conteudo": "Pensamento de hoje + testar editando",
       "autoria": "Terminando curso editar crud",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": true
     },
     {
       "id": 5,
       "conteudo": "Implementando o Router",
       "autoria": "RxJs",
-      "modelo": "modelo2"
+      "modelo": "modelo2",
+      "favorito": true
     },
     {
       "id": 6,
       "conteudo": "alterando mensagem",
       "autoria": "mensagem",
-      "modelo": "modelo1"
+      "modelo": "modelo1",
+      "favorito": false
     },
     {
       "conteudo": "Adicionando pensamentos",
       "autoria": "Molina",
       "modelo": "modelo1",
+      "favorito": true,
       "id": 7
     },
     {
       "conteudo": "Adicionando o sétimo pensamento para paginação",
       "autoria": "Mollina",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 8
     }
   ]
