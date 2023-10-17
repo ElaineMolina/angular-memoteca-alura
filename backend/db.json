@@ -29,6 +29,18 @@
       "conteudo": "alterando mensagem",
       "autoria": "mensagem",
       "modelo": "modelo1"
+    },
+    {
+      "conteudo": "Adicionando pensamentos",
+      "autoria": "Molina",
+      "modelo": "modelo1",
+      "id": 7
+    },
+    {
+      "conteudo": "Adicionando o sétimo pensamento para paginação",
+      "autoria": "Mollina",
+      "modelo": "modelo2",
+      "id": 8
     }
   ]
 }
