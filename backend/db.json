@@ -19,14 +19,14 @@
       "conteudo": "Pensamento de hoje + testar editando",
       "autoria": "Terminando curso editar crud",
       "modelo": "modelo1",
-      "favorito": true
+      "favorito": false
     },
     {
       "id": 5,
       "conteudo": "Implementando o Router",
       "autoria": "RxJs",
       "modelo": "modelo2",
-      "favorito": true
+      "favorito": false
     },
     {
       "id": 6,
@@ -39,7 +39,7 @@
       "conteudo": "Adicionando pensamentos",
       "autoria": "Molina",
       "modelo": "modelo1",
-      "favorito": true,
+      "favorito": false,
       "id": 7
     },
     {

@@ -11,18 +11,35 @@ export class ThoughtService {
 
   private readonly API = 'http://localhost:3000/pensamentos';
 
-  listar(pagina: number, filtro: string): Observable<Thought[]> {
+  listar(pagina: number, filtro: string, favoritos: boolean): Observable<Thought[]> {
 
     const itensPorPagina = 6;
 
-    let params = new HttpParams().set("_page", pagina).set("_limit", itensPorPagina)
+    let params = new HttpParams()
+      .set("_page", pagina)
+      .set("_limit", itensPorPagina)
 
-    if (filtro.trim().length > 2) {
-      params = params.set('q', filtro)
+    if(filtro.trim().length > 2) {
+      params = params.set("q", filtro)
     }
-    return this.http.get<Thought[]>(this.API, {params})
-    // return this.http.get<Thought[]>(`${this.API}?_page=${pagina}&_limit=${itensPorPagina}`);
+
+    if(favoritos) {
+      params = params.set("favorito", true)
+    }
+
+    return this.http.get<Thought[]>(this.API, { params})
   }
+
+  // listarPensamentosFavoritos(pagina: number, filtro: string): Observable<Thought[]> {
+  //   const itensPorPagina = 6;
+
+  //   let params = new HttpParams().set("_page", pagina).set("_limit", itensPorPagina).set("favorito", true)
+
+  //   if (filtro.trim().length > 2) {
+  //     params = params.set('q', filtro)
+  //   }
+  //   return this.http.get<Thought[]>(this.API, {params})
+  // }
 
   criar(pensamento: Thought): Observable<Thought> {
     return this.http.post<Thought>(this.API, pensamento);

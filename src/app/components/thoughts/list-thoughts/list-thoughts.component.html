@@ -6,12 +6,20 @@
       (keyup)="pesquisarPensamentos()">
       <img src="/assets/imagens/icons8-lupa.gif" alt="Lupa dinâmica">
     </div>
-    <h2 class="ff-inter">Meu Mural</h2>
-    <button routerLink="/createThought" class="botao">Adicionar pensamento</button>
+    <h2 class="ff-inter">{{ titulo }}</h2>
+    <div class="botoes">
+      <button class="botao" (click)="recarregarComponente()">Meu Mural</button>
+      <button class="botao" (click)="listarFavoritos()">Meus Favoritos</button>
+      <button routerLink="/criarPensamento" class="botao">Novo pensamento</button>
+    </div>
   </header>
   <div class="mural" *ngIf="listaPensamentos.length > 0, else semPensamentos">
     <div *ngFor="let pensamento of listaPensamentos">
-      <app-thought [pensamento]="pensamento"></app-thought>
+      <app-thought
+      [pensamento]="pensamento"
+      [listaFavoritos]="listaFavoritos"
+      ></app-thought>
+
     </div>
   </div>
 </section>
