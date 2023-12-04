@@ -35,9 +35,8 @@ export class CreateThoughtComponent implements OnInit {
     })
   }
 
-  criarPensamento(){
-    console.log(this.formulario.get('autoria')?.errors);
-    if (this.formulario.valid){
+  criarPensamento() {
+    if(this.formulario.valid){
       this.service.criar(this.formulario.value).subscribe(() => {
         this.router.navigate(['/listThought'])
       })

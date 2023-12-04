@@ -23,12 +23,11 @@ export class ListThoughtsComponent implements OnInit {
     private router: Router
     ) { }
 
-  ngOnInit(): void {
-    this.service.listar(this.paginaAtual, this.filtro, this.favoritos)
-    .subscribe((listaPensamentos) => {
-      this.listaPensamentos = listaPensamentos
-    });
-  }
+    ngOnInit(): void {
+      this.service.listar(this.paginaAtual, this.filtro, this.favoritos).subscribe((listaPensamentos) => {
+        this.listaPensamentos = listaPensamentos
+      })
+    }
 
   carregarMaisPensamentos() {
     this.service.listar(++this.paginaAtual, this.filtro, this.favoritos)

@@ -1,53 +1,32 @@
 {
   "pensamentos": [
     {
-      "id": 2,
-      "conteudo": "Estudando Angular",
-      "autoria": "Dev Alura",
-      "modelo": "modelo2",
-      "favorito": false
-    },
-    {
-      "id": 3,
-      "conteudo": "Angular é o melhor'",
-      "autoria": "Dev Alura",
+      "conteudo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fermentum, lorem at molestie vulputate, mauris quam efficitur mi, ac pellentesque urna odio ac enim. json",
+      "autoria": "json",
       "modelo": "modelo3",
-      "favorito": false
+      "favorito": true,
+      "id": 1
     },
     {
-      "id": 4,
-      "conteudo": "Pensamento de hoje + testar editando",
-      "autoria": "Terminando curso editar crud",
+      "id": 2,
+      "conteudo": "teste db off",
+      "autoria": "Testando editar pensamento",
       "modelo": "modelo1",
       "favorito": false
     },
     {
-      "id": 5,
-      "conteudo": "Implementando o Router",
-      "autoria": "RxJs",
-      "modelo": "modelo2",
-      "favorito": false
-    },
-    {
-      "id": 6,
-      "conteudo": "alterando mensagem",
-      "autoria": "mensagem",
-      "modelo": "modelo1",
-      "favorito": false
-    },
-    {
-      "conteudo": "Adicionando pensamentos",
-      "autoria": "Molina",
-      "modelo": "modelo1",
-      "favorito": false,
-      "id": 7
-    },
-    {
-      "conteudo": "Adicionando o sétimo pensamento para paginação",
-      "autoria": "Mollina",
+      "conteudo": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      "autoria": "Lorem",
       "modelo": "modelo2",
       "favorito": false,
-      "id": 8
+      "id": 3
+    },
+    {
+      "conteudo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum teste db off",
+      "autoria": "Lorem",
+      "modelo": "modelo2",
+      "favorito": true,
+      "id": 3
     }
   ]
 }

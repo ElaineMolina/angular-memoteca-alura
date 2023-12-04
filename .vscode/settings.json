@@ -1,6 +1,7 @@
 {
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 100,
-  "editor.fontSize": 16,
-  "terminal.integrated.fontWeightBold": "bold"
+  "editor.fontSize": 18,
+  "terminal.integrated.fontWeightBold": "bold",
+  "editor.fontFamily": "Montserrat"
 }

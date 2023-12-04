@@ -7,27 +7,29 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ThoughtService {
+
+ private readonly API = 'http://localhost:3000/pensamentos'
+//  private readonly API = 'http://localhost:3000/pensamentos/listThought'
+
   constructor(private http: HttpClient) {}
 
-  private readonly API = 'http://localhost:3000/pensamentos';
 
   listar(pagina: number, filtro: string, favoritos: boolean): Observable<Thought[]> {
-
     const itensPorPagina = 6;
 
     let params = new HttpParams()
-      .set("_page", pagina)
-      .set("_limit", itensPorPagina)
+      .set('_page', pagina)
+      .set('_limit', itensPorPagina);
 
-    if(filtro.trim().length > 2) {
-      params = params.set("q", filtro)
+    if (filtro.trim().length > 2) {
+      params = params.set('q', filtro);
     }
 
-    if(favoritos) {
-      params = params.set("favorito", true)
+    if (favoritos) {
+      params = params.set('favorito', true);
     }
 
-    return this.http.get<Thought[]>(this.API, { params})
+    return this.http.get<Thought[]>(this.API, { params });
   }
 
   // listarPensamentosFavoritos(pagina: number, filtro: string): Observable<Thought[]> {
@@ -42,7 +44,7 @@ export class ThoughtService {
   // }
 
   criar(pensamento: Thought): Observable<Thought> {
-    return this.http.post<Thought>(this.API, pensamento);
+    return this.http.post<Thought>(this.API, pensamento)
   }
 
   excluir(id: number): Observable<Thought> {
@@ -56,15 +58,14 @@ export class ThoughtService {
   }
 
   editar(pensamento: Thought): Observable<Thought> {
-    const url = `${this.API}/${pensamento.id}`
-    return this.http.put<Thought>(url, pensamento )
-}
+    const url = `${this.API}/${pensamento.id}`;
+    return this.http.put<Thought>(url, pensamento);
+  }
 
-mudarFavorito(pensamento: Thought): Observable<Thought> {
-  pensamento.favorito = !pensamento.favorito
-  // const url = `${this.API}/${pensamento.id}`
-  // return this.http.put<Thought>(url, pensamento)
-  return this.editar(pensamento)
-}
-
+  mudarFavorito(pensamento: Thought): Observable<Thought> {
+    pensamento.favorito = !pensamento.favorito;
+    // const url = `${this.API}/${pensamento.id}`
+    // return this.http.put<Thought>(url, pensamento)
+    return this.editar(pensamento);
+  }
 }
